@@ -1,0 +1,30 @@
+
+from PyQt5.QtWidgets import *
+
+from PyQt5.uic import loadUiType
+
+from xlrd import *
+
+
+ui,_ = loadUiType('index.ui')
+
+class MainApp(QMainWindow , ui):
+    def __init__(self):
+        QMainWindow.__init__(self)
+
+
+
+class main(QWidget):
+    def __init__(self):
+        QWidget.__init__(self)
+
+
+
+def main():
+        app = QApplication(sys.argv)
+        window = MainApp()
+        window.show()
+        app.exec_()
+
+if __name__ == '__main__':
+        main()
